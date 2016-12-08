@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  contractor_id: MyString
+  job_type: MyString
+  text: MyString
+  image_1: MyString
+
+two:
+  user_id: MyString
+  contractor_id: MyString
+  job_type: MyString
+  text: MyString
+  image_1: MyString
