@@ -1,9 +1,7 @@
 class Contractor < ApplicationRecord
-  reviews belongs_to :contractors
-  awards belongs_to :contractors
-  prefered contractor status belongs_to :contractors
-  has_many :reviews
+  belongs_to :contractor, through: :reviews
   belongs_to :user
-  has_many :user discriptions
-
+  has_many :reviews
+  has_many :user_discriptions
+  has_many :contractors
 end
