@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-  has_many :contractor_reviews, through: :job_type
+  belongs_to :job_category
   belongs_to :users
   belongs_to :contractors
 

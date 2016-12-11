@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161209222147) do
+ActiveRecord::Schema.define(version: 20161211212220) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contractor_job_categories", force: :cascade do |t|
+    t.integer  "contractor_id"
+    t.integer  "job_category_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "contractor_reviews", force: :cascade do |t|
     t.string   "review"
@@ -31,6 +38,12 @@ ActiveRecord::Schema.define(version: 20161209222147) do
     t.string   "job_description"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "job_categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "listings", force: :cascade do |t|
@@ -67,6 +80,7 @@ ActiveRecord::Schema.define(version: 20161209222147) do
     t.string   "phone_number"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "username"
   end
 
 end

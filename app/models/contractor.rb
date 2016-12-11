@@ -1,7 +1,6 @@
 class Contractor < ApplicationRecord
-  belongs_to :contractor, through: :reviews
-  belongs_to :user
+  has_many :users, through: :reviews
   has_many :reviews
-  has_many :user_discriptions
-  has_many :contractors
+  has_many :users, through: :job_catigories
+  has_many :job_catigories, through: :contractor_job_catigories
 end
