@@ -48,8 +48,12 @@
 # end
 
 # Make fake reviews
-Review.create(stars: 5, user_id: 1, contractor_id: 7, text:"Don's crew were on time, curtious, and neat.  They wired the whole house, and finished on time and on budget." )
-Review.create(stars: 1, user_id: 1, contractor_id: 9, text: "The guy came back from lunch drunk. He actually staggered and fell down.  This guy will not be back.  Thumbs way down.")
-Review.create(stars: 3, user_id: 1, contractor_id: 8, text: "Beutiful work but scetchy estimates. He worked weekends. He convinced us to spend way more than planned.")
-Review.create(stars: 4, user_id: 1, contractor_id: 10, text: "Really nice guy! HArd working; finished early; went to Home Depot with us to pick out materials")
+# Review.create(stars: 5, user_id: 1, contractor_id: 7, job_category_id: 5, text:"Don's crew were on time, curtious, and neat.  They wired the whole house, and finished on time and on budget." )
+# Review.create(stars: 1, user_id: 1, job_category_id: 7,contractor_id: 9, text: "The guy came back from lunch drunk. He actually staggered and fell down.  This guy will not be back.  Thumbs way down.")
+# Review.create(stars: 3, user_id: 1, job_category_id: 3,contractor_id: 8, text: "Beutiful work but scetchy estimates. He worked weekends. He convinced us to spend way more than planned.")
+# Review.create(stars: 4, user_id: 1, job_category_id: 2,contractor_id: 10, text: "Really nice guy! HArd working; finished early; went to Home Depot with us to pick out materials")
 
+# Listing.create(adress:"618 S. Laflin Unit E", for_sale: "$599,000", bedrooms:"3", bathrooms:"3")
+# Listing.create(adress:"1517 W. Harrison", for_sale: "$439,000", bedrooms:"2", bathrooms:"2")
+# Listing.create(adress:"1443 W. Harrison", last_trades: "$420,000", bedrooms:"2", bathrooms:"2")
+# Listing.create(adress:"616 S. Laflin Unit B", last_trades: "$556,000", bedrooms:"3", bathrooms:"3")
