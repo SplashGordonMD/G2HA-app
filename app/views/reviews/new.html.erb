@@ -1,0 +1,23 @@
+<h1>Review the Contractors work</h1>
+<%= form_tag '/reviews', method: :post do  %>
+  <div>
+    <%= hidden_field_tag :user_id, current_user.id %>
+  </div>
+  <div>
+    <%= label_tag :contractor_id %>
+    <%= select_tag(:contractor_id, options_from_collection_for_select(Contractor.order(:name), :id, :name, @review.contractor_id), {:prompt => 'Select a Contractor'} ) %>
+  </div>
+  <div>
+    <%= label_tag :text %>
+    <%= text_field_tag :text %>
+  </div>
+  <div>
+    <%= label_tag :stars, "How many stars (5 being best, 1 being worst):" %>
+    <%= text_field_tag :stars %>
+  </div>
+  <div>
+    <%= label_tag :job_category_id %>
+    <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category'} ) %>
+  </div>
+  <%= submit_tag "Submit" %>
+<% end %>

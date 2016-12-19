@@ -1,9 +1,7 @@
 class ContractorsController < ApplicationController
   def index 
     @contractors = Contractor.all 
-    
     render "index.html.erb"
-
   end
 
   def new
@@ -15,6 +13,7 @@ class ContractorsController < ApplicationController
   end
 
   def show
+    @contractor = Contractor.find_by(id: params[:id])
     render "show.html.erb" 
   end
 

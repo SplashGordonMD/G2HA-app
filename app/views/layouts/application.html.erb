@@ -51,13 +51,22 @@
     <!-- Sidemenu -->
     <section id="pushmenu-right" class="pushmenu pushmenu-right side-menu">
         <a id="menu-sidebar-close-icon" class="menu-close"><i class="ion ion-android-close"></i></a>
-        <h5 class="white">Sign In</h5>
-        <div class="sign-in">
-            <input class="input-sm form-full" type="email" aria-required="true" id="email" name="email" placeholder="Email" value="" />
-            <input class="input-sm form-full" type="password" aria-required="true" id="password" name="password" placeholder="Password" value="" />
-            <input type="submit" class="btn btn-md btn-color-b form-full" value="Sign In" />
-            <a>New Customer?</a>
-        </div>
+        <% if current_user %>
+            <h5 class="white">My Account</h5>
+            <div class="sign-in">
+                <a href="/logout" class="btn btn-md btn-color-b form-full">Sign Out</a>
+            </div>
+        <% else %>
+            <h5 class="white">Sign In</h5>
+            <%= form_tag '/login', method: :post do %>
+                <div class="sign-in">
+                    <%= text_field_tag :email, "", class: "input-sm form-full" %>
+                    <%= password_field_tag :password, "", class: "input-sm form-full" %>
+                   <%= submit_tag "Submit", class: "btn btn-md btn-color-b form-full" %>
+                    <a>New Customer? TESTING</a>
+                </div>
+            <% end %>
+        <% end %>
         <ul>
             <li><a class="all-demos-link" target="_blank" href="../demo.html">Main Demo Page</a></li>
             <li><a href="home.html">Home Default</a></li>

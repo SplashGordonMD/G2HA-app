@@ -1,4 +1,9 @@
 <h1>Contractor Index page</h1>
-<h1>_____________________</h1>
-<p>content from contractors index</p>
+<% @contractors.each do |contractor| %>
+<p>Name: <%= contractor.name %> </p>
+<p>Phone Number: <%= contractor.phone_number %> </p>
+<p>Website: <%= contractor.web_site %></p>
+<p>Email: <%= contractor.email %></p>
+<p>Job Description: <%= contractor.job_description %></p>      
+<% end %>
 
