@@ -5,11 +5,22 @@ class ContractorsController < ApplicationController
   end
 
   def new
+    @contractor = Contractor.new
     render "new.html.erb"
   end
 
   def create
-    render "new.html.erb"
+    @contractor=Contractor.new(name: params[:name], 
+            phone_number: params[:phone_number],
+            web_site: params[:web_site],
+            email: params[:email],
+            job_description: params[:job_description])
+    if @contractor.save 
+      redirect_to "/contractors/#{@contractor.id}"
+    else
+      render :new
+    end
+    
   end
 
   def show
@@ -18,11 +29,21 @@ class ContractorsController < ApplicationController
   end
 
   def edit
+    @contractor=Contractor.find_by(id: params[:id])
     render "edit.html.erb"
   end
 
   def update
-    render "update.html.erb"
+    @contractor=Contractor.find_by(id: params[:id])
+    if @contractor.update(name: params[:name], 
+            phone_number: params[:phone_number],
+            web_site: params[:web_site],
+            email: params[:email],
+            job_description: params[:job_description])
+      redirect_to "/contractors/#{@contractor.id}"
+    else
+      render :new
+    end
   end
 
   def destroy
