@@ -1,19 +1,21 @@
 class ReviewsController < ApplicationController
   
+  
+
   def new
-  @review=Review.new
-  render "new.html.erb"
+    @review=Review.new
+    render "new.html.erb"
   end
 
   def create
-    review=Review.new(user_id: params[:user_id], 
+    @review=Review.new(user_id: params[:user_id], 
             contractor_id: params[:contractor_id],
             text: params[:text],
             stars: params[:stars],
             job_category_id: params[:job_category_id])
 
-    if review.save 
-      redirect_to "/reviews/#{review.id}"
+    if @review.save 
+      redirect_to "/reviews/#{@review.id}"
     else
       render :new
     end

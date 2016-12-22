@@ -9,12 +9,15 @@ Rails.application.routes.draw do
   get '/contractors/:id/edit' => 'contractors#edit'
   patch '/contractors/:id' => 'contractors#update'
   delete '/contractors/:id' => 'contractors#destroy'
+  
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-   get '/reviews' => "reviews#index"
+  
+  get '/reviews' => "reviews#index"
   get '/reviews/new' => "reviews#new"
   post '/reviews' => "reviews#create"
   get '/reviews/:id' => 'reviews#show'
