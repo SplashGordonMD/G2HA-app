@@ -1,7 +1,19 @@
 class ContractorsController < ApplicationController
+  
   def index 
-    @contractors = Contractor.all 
+    @contractors = Contractor.all
+
+    job_description = params[:job_description]
+    sort_attribute = params[:sort]
+
+
+    if job_description
+      # @contractors = Contractor.order(sort_attribute)
+      @contractors = Contractor.where("job_description LIKE ?", job_description)
+    end
+
     render "index.html.erb"
+
   end
 
   def new

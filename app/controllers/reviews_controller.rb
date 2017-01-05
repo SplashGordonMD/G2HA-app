@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
-  
-  
+
+  def index
+    render "index.html.erb"
+  end
 
   def new
     @review=Review.new
@@ -24,5 +26,17 @@ class ReviewsController < ApplicationController
   def show
     @review=Review.find_by(id: params[:id])
     render "show.html.erb"
+  end
+
+  def edit
+    render 'edit.html.erb'
+  end
+
+  def update
+    render 'update.html.erb'
+  end
+
+  def destroy
+    render 'destroy.html.erb'
   end
 end   

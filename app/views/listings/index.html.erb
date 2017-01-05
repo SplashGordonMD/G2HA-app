@@ -1,0 +1,8 @@
+<h1>List of Garabaldi Homes for Sale and Last Trades</h1>
+<% @listings.each do |listing| %>
+	<h2>Adress: <%= listing.adress %> </h2>
+	<p>For Sale: <%= listing.for_sale %> </p>
+	<p>Last Trades: <%= listing.last_trades %></p>
+	<p>Bedrooms: <%= listing.bedrooms %></p>
+	<p>Bathrooms: <%= listing.bathrooms %></p>   
+<% end %>

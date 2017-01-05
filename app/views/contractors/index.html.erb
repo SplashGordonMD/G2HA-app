@@ -1,12 +1,22 @@
 <h1>Contractor Index page</h1>
+<!-- <li><a href="/contractors?sort=job_description">Sort Work by Job Description</a></li> -->
+<div class="dropdown">
+<!--   <button onclick="myFunction()" class="dropbtn"> -->Choose the job that discribes your job</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/contractors?job_description=Tile">Tiling </a>
+    <a href="/contractors?job_description=Electrician">Electrician </a>
+    <a href="/contractors?job_description=Plumbing">Plumber </a>
+  <!-- </div> -->
+</div>
 <% @contractors.each do |contractor| %>
 	<h2>Name: <%= contractor.name %> </h2>
 	<p>Phone Number: <%= contractor.phone_number %> </p>
 	<p>Website: <%= contractor.web_site %></p>
 	<p>Email: <%= contractor.email %></p>
-	<p>Job Description: <%= contractor.job_description %></p>      
-    <a href="/contractors/<%= contractor.id %>">More Info</a>
+	<p>Job Description: <%= contractor.job_description %></p>   
+	<a href="/contractors/<%= contractor.id %>">More Info</a>
 <% end %>
+
 
 
 
