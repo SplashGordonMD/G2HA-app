@@ -2,6 +2,14 @@
 <p>Phone Number: <%= @contractor.phone_number %> </p>
 <p>Website: <%= @contractor.web_site %></p>
 <p>Email: <%= @contractor.email %></p>
-<p>Job Description: <%= @contractor.job_description %></p> 
-<p>Reviews: <%= @contractor_reviews %></p>    
+<p>Job Description: <%= @contractor.job_description %></p>
+<p>Status: <%= @contractor.preferred %></p> 
+
+<h3>Reviews: </h3>
+<% @contractor.reviews.each do |review| %>
+	<p>Stars: <%= review.stars %></p>
+	<p>Job Category: <%= review.job_category.name %></p>
+	<p>Review: <%= review.text %></p>
+	<hr>
+<% end %>
     <a href="/contractors">Back to all contractors</a>

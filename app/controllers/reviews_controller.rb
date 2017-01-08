@@ -19,6 +19,7 @@ class ReviewsController < ApplicationController
     if @review.save 
       redirect_to "/reviews/#{@review.id}"
     else
+      p @review.errors.full_messages
       render :new
     end
   end
