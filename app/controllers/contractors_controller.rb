@@ -37,6 +37,7 @@ class ContractorsController < ApplicationController
 
   def show
     @contractor = Contractor.find_by(id: params[:id])
+    @review = Review.where(contractor_id: params[:id])
     render "show.html.erb"
   end
 
