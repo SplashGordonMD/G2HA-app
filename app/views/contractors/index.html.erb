@@ -45,14 +45,28 @@
             
   <!-- </div> -->
 </div>
+<div class="row">
+  
 <% @contractors.each do |contractor| %>
-	<h2>Name: <%= contractor.name %> </h2>
-	<p>Phone Number: <%= contractor.phone_number %> </p>
-	<p>Website: <%= contractor.web_site %></p>
-	<p>Email: <%= contractor.email %></p>
-	<p>Job Description: <%= contractor.job_description %></p>   
-	<a href="/contractors/<%= contractor.id %>">More Info</a>
+<div class="col-md-4">
+  <div class="well">
+  	<h2>Name: <%= contractor.name %> </h2>
+  	<p>Phone Number: <%= contractor.phone_number %> </p>
+  	<p>Website: <%= contractor.web_site %></p>
+  	<p>Email: <%= contractor.email %></p>
+  	<p>Job Description: <%= contractor.job_description %></p>
+    <% if contractor.preferred? %>
+      <div>
+        <img src="<%= asset_path 'preferred.gif' %>"" width="100">
+      </div>
+    <% end %>
+  	<a href="/contractors/<%= contractor.id %>">More Info</a>
+  </div>
+  
+</div>
 <% end %>
+</div>
+
 
 
 
