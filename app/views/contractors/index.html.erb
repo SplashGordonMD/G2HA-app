@@ -1,41 +1,20 @@
-<h1>Contractor Index page</h1>
+<h1>Garabaldi Square Contractor Directory</h1>
 <!-- <li><a href="/contractors?sort=job_description">Sort Work by Job Description</a></li> -->
+<!-- job_category.each do |job|
+  <li>
+    <a href="/contractors?job_description=#{job.name}"><#%= job.name %> </a>
+  </li>
+end -->
 
 <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search by Job Description <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li>
-            	<a href="/contractors?job_description=Tile">Tiling </a></li>
-            <li>
-            	<a href="/contractors?job_description=Electrician">Electrician </a>
-            </l>
-            <li>
-            	<a href="/contractors?job_description=Plumbing">Plumber </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Lighting">Lighting </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Kitchens">Kitchens </a>
-            </li>
-              <li>
-              <a href="/contractors?job_description=Painting">Painter </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Interior_Design">Interior Design </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Garage_door_repair">Garage Door Repair </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Bathroom">Bathrooms </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Drapes">Drapes </a>
-            </li>
-            <li>
-              <a href="/contractors?job_description=Interior_Design">Interior Design </a>
-            </li>
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Search by Job Description <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+  <% @job_categories.each do | job_category | %>
+    <li>
+      <a href="/contractors?job_description=<%= job_category.name %>"><%= job_category.name %></a>
+    </li>
+  <%end %>
+  </ul>
             
             
 
@@ -49,12 +28,13 @@
   
 <% @contractors.each do |contractor| %>
 <div class="col-md-4">
-  <div class="well">
+  <div class="well height-700">
   	<h2>Name: <%= contractor.name %> </h2>
   	<p>Phone Number: <%= contractor.phone_number %> </p>
   	<p>Website: <%= contractor.web_site %></p>
   	<p>Email: <%= contractor.email %></p>
   	<p>Job Description: <%= contractor.job_description %></p>
+    <img src="<%= contractor.image %>" width="300" height="300">
     <% if contractor.preferred? %>
       <div>
         <img src="<%= asset_path 'preferred.gif' %>"" width="100">

@@ -12,6 +12,8 @@ class ContractorsController < ApplicationController
       @contractors = Contractor.where("job_description LIKE ?", job_description)
     end
 
+    @job_categories = JobCategory.all
+
     render "index.html.erb"
 
   end
@@ -37,7 +39,8 @@ class ContractorsController < ApplicationController
 
   def show
     @contractor = Contractor.find_by(id: params[:id])
-    @review = Review.where(contractor_id: params[:id])
+    # @reviews = Review.where(contractor_id: params[:id])
+    @review = Review.new
     render "show.html.erb"
   end
 
