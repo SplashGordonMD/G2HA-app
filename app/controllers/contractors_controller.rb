@@ -1,4 +1,5 @@
 class ContractorsController < ApplicationController
+  before_action :authenticate_user!
   
   def index 
     @contractors = Contractor.all

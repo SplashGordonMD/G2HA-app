@@ -1,38 +1,47 @@
-<h1>Name: <%= @contractor.name %> </h1>
-<p>Phone Number: <%= @contractor.phone_number %> </p>
-<p>Website: <%= @contractor.web_site %></p>
-<p>Email: <%= @contractor.email %></p>
-<p>Job Description: <%= @contractor.job_description %></p>
-<p>Status: <%= @contractor.preferred? %></p> 
+<div class="container">
+  <h1>Name: <%= @contractor.name %> </h1>
+  <p>Phone Number: <%= @contractor.phone_number %> </p>
+  <p>Website: <%= @contractor.web_site %></p>
+  <p>Email: <%= @contractor.email %></p>
+  <p>Job Description: <%= @contractor.job_description %></p>
+  <p>Status: <%= @contractor.preferred? %></p> 
 
-<h2>Reviews: </h2>
-<% @contractor.reviews.each do |review| %>
-	<p>Stars: <%= review.stars %></p>
-	<p>Job Category: <%= review.job_category.id %></p>
-	<p>Review: <%= review.text %></p>
-	<hr>
-<% end %>
-    <a href="/contractors">Back to all contractors</a>
 
-    <h1>Review the Contractors work</h1>
-<%= form_tag '/reviews', method: :post do  %>
-  <div>
-    <%= hidden_field_tag :user_id, current_user.id %>
-  </div>
-  <div>
-    <%= hidden_field_tag :contractor_id, @contractor.id %>
-  </div>
-  <div>
-    <%= label_tag :text %>
-    <%= text_field_tag :text %>
-  </div>
-  <div>
-    <%= label_tag :stars, "How many stars (5 is highly recommended, 1 never again):" %>
-    <%= text_field_tag :stars %>
-  </div>
-  <div>
-    <%= label_tag :job_category_id %>
-    <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category'} ) %>
-  </div>
-  <%= submit_tag "Submit" %>
-<% end %>
+  <h2>Reviews: </h2>
+  <% @contractor.reviews.each do |review| %>
+  	<p style="display: inline-block; float: left;">Rating:</p>
+    <div class="rating" style="float: left;">
+      <% review.stars.times do %>
+        <span>☆</span>
+      <% end %>
+    </div>
+    <br><br>
+  	<p>Job Category: <%= review.job_category.id %></p>
+  	<p>Review: <%= review.text %></p>
+  	<hr>
+  <% end %>
+      <a href="/contractors">Back to all contractors</a>
+
+      <h1>Review the Contractors work</h1>
+  <%= form_tag '/reviews', method: :post do  %>
+    <div>
+      <%= hidden_field_tag :user_id, current_user.id %>
+    </div>
+    <div>
+      <%= hidden_field_tag :contractor_id, @contractor.id %>
+    </div>
+    <div>
+      <%= label_tag :text %>
+      <%= text_field_tag :text %>
+    </div>
+    <div>
+      <%= label_tag :stars, "How many stars (5 is highly recommended, 1 never again):" %>
+      <%= text_field_tag :stars %>
+    </div>
+    <div>
+      <%= label_tag :job_category_id %>
+      <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category'} ) %>
+    </div>
+    <%= submit_tag "Submit" %>
+  <% end %>
+</div>
