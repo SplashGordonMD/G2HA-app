@@ -1,4 +1,12 @@
 <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
   <h1>Name: <%= @contractor.name %> </h1>
   <p>Phone Number: <%= @contractor.phone_number %> </p>
   <p>Website: <%= @contractor.web_site %></p>
@@ -9,8 +17,8 @@
 
   <h2>Reviews: </h2>
   <% @contractor.reviews.each do |review| %>
-  	<p style="display: inline-block; float: left;">Rating:</p>
-    <div class="rating" style="float: left;">
+  	<!-- <p style="display: inline-block; float: left;">Rating:</p> -->
+    <div class="star-rating" style="float: left;">
       <% review.stars.times do %>
         <span>☆</span>
       <% end %>

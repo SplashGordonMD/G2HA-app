@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require star-rating
+//= require LANG
 //= require_tree .

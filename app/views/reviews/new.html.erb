@@ -23,7 +23,7 @@
   </div>
   <div>
     <%= label_tag :stars, "How many stars (5 is highly recommended, 1 never again):" %>
-    <%= text_field_tag :stars %>
+    <input id="input-id" name="stars" type="text" class="rating" data-size="lg" >
   </div>
   <div>
     <%= label_tag :job_category_id %>
@@ -32,3 +32,11 @@
   <%= submit_tag "Submit" %>
   </div>
 <% end %>
+
+<script>
+ 
+  $("#input-id").rating();
+
+  // with plugin options (do not attach the CSS class "rating" to your input if using this approach)
+  $("#input-id").rating({'size':'lg'});
+</script>

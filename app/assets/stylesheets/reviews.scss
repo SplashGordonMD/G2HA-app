@@ -1,24 +1,24 @@
 // Place all the styles related to the Reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// .rating > span:hover:before {
-//    content: "\2605";
-//    position: absolute;
-// }
+.star-rating > span:hover:before {
+   content: "\2605";
+   position: absolute;
+}
 
-.rating {
+.star-rating {
   unicode-bidi: bidi-override;
   direction: rtl;
   // margin-right: 
 }
-.rating > span {
+.star-rating > span {
   display: inline-block;
   position: relative;
   width: 1.1em;
   font-size: 25px;
 }
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
+.star-rating > span:hover:before,
+.star-rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;
 }
