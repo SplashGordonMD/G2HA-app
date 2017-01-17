@@ -1,3 +1,13 @@
+<div class="container">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 <h1>Review the Contractors work</h1>
 <%= form_tag '/reviews', method: :post do  %>
   <div>
@@ -20,4 +30,5 @@
     <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category'} ) %>
   </div>
   <%= submit_tag "Submit" %>
+  </div>
 <% end %>
