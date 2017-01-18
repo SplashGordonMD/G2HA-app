@@ -9,9 +9,29 @@
 	<br>
 <h3 class="textCenter padding40">Contract reviews empower us as homeowners at Garibaldi Square. Two review for of a single contractor with and avarage of 4 stars gives that contractor preferred status. Your opinion can lead to the contractor getting more or less work from our community. Send us a picture of their work. The review and pictures of their are the contractors "calling card" for thier work. Letting us know how they did, binds our community, and ensures quality craftmanship   </h3>
 <h4 class="textCenter padding40">Tells if their quote was within the budget, if their workmanship was as expected, or any other acuman related to the work they completed. Knowing the reviews are available to potential customers, andpictures available for potiential customers will put the onus on the contractor to give a superior effort.</h4>
-<p>Enter your review</p>
-<textarea cols="100" rows="40" id="post_body" name="post[body]" id="textbox"></textarea>
+<% @users.each do |user| %>
+  <h2><%= user.first_name %></h2>
+  <% user.reviews.each do |review| %>
+  	<h4><a href="/contractors/<%= review.contractor.id %>"><%= review.contractor.name %></a></h4>
+  	<div>
+  		<img src="<%= review.contractor.image %>" width="300" height="300">
+  	</div>
+  	<div class="star-rating" style="float: left;">
+      <% review.stars.times do %>
+        <span>☆</span>
+      <% end %>
+    </div>
+    <br><br>
+  	<p>Job Category: <%= review.job_category.name if review.job_category %></p>
+  	<p>Review: <%= review.text %></p>
+  <% end %>
+<% end %>
+<h4>Enter your review</h4>
+<textarea cols="160" rows="40" id="post_body" name="post[body]" id="textbox"></textarea>
 </div>
+
+<!-- contractor id 7 -->
+<!-- job category id 5 -->
 <!-- <div class="rating">
 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
 </div> -->

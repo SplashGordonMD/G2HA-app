@@ -9,12 +9,16 @@
 	<br>
 	<br>
 	<br>
-<h1>List of Garabaldi Homes for Sale and Last Trades</h1>
+<h2 class="title">Garibaldi Homes for Sale & Last Trades</h2>
+	<br>
+	<br>
 <% @listings.each do |listing| %>
-	<h2>Adress: <%= listing.adress %> </h2>
-	<p>For Sale: <%= listing.for_sale %> </p>
-	<p>Last Trades: <%= listing.last_trades %></p>
-	<p>Bedrooms: <%= listing.bedrooms %></p>
-	<p>Bathrooms: <%= listing.bathrooms %></p>   
+	<h2>Address: <%= listing.adress %> </h2>
+	<h3>For Sale: <%= listing.for_sale %> </h3>
+	<h3>Last Trades: <%= listing.last_trades %></h3>
+	<h4>Bedrooms: <%= listing.bedrooms %></h4>
+	<h4>Bathrooms: <%= listing.bathrooms %></h4>  
+	<br>
+	<br> 
 <% end %>
 </div>
