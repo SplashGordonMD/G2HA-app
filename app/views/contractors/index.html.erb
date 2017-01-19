@@ -35,13 +35,13 @@ end -->
     <% @contractors.each do |contractor| %>
       <div class="col-md-4">
         <div class="well height-700">
-          <h2>Name: <%= contractor.name %> </h2>
-          <p>Phone Number: <%= contractor.phone_number %> </p>
-          <p>Website: <%= contractor.web_site %></p>
-          <p>Email: <%= contractor.email %></p>
+          <h2 style="min-height: 3em"><%= contractor.name %> </h2>
+          <p><%= contractor.phone_number %> </p>
+          <p><%= contractor.web_site %></p>
+          <p><%= contractor.email %></p>
           <p>Job Description: <%= contractor.job_description %></p>
-          <img src="<%= contractor.image %>" width="300" height="300">
-          <% if contractor.preferred? %>
+          <div class="contractor-image" style="background-image: url(<%= contractor.image %>)"></div>
+          <% if false and contractor.preferred? %>
             <div>
               <img src="<%= asset_path 'preferred.gif' %>"" width="100">
             </div>

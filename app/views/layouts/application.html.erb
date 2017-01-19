@@ -83,16 +83,7 @@
         <header id="header" class="header">
             <div class="container header-inner">
 
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="/">
-                        <%= image_tag "g-square-green.png", class: "logo-light" %>
-                        <%= image_tag "g-square-green.png", class: "logo-dark" %>
-                        <!-- <img class="logo-light" src="assets/g-square-green.png" alt="Mazel" />
-                        <img class="logo-dark" src="assets/g-square-green.png" alt="Mazel" /> -->
-                    </a>
-                </div>
-                <!-- End Logo -->
+                
 
                 <!-- Rightside Menu (Search, Cart, Bart icon) -->
                 <div class="side-menu-btn">
@@ -126,6 +117,9 @@
                 <div class="nav-menu">
                     <ul class="nav-menu-inner">
                         <li>
+
+                        </li>
+                        <li>
                             <a href="/">Home</a>
                         </li>
                         <li>
@@ -146,7 +140,19 @@
 
         <!-- End Header -->
 
-        <!-- CONTENT --------------------------------------------------------------------------------->
+        <!-- CONTENT -->
+        <!-- Logo -->
+                <div class="client-logo">
+                    <a href="/">
+                        
+                        <h1 class="logo-height"><%= image_tag "g-square-green.png" %></h1>
+                        <!-- <img class="logo-light" src="assets/g-square-green.png" alt="Mazel" />
+                        <img class="logo-dark" src="assets/g-square-green.png" alt="Mazel" /> -->
+                    </a>
+                </div>
+                <!-- End Logo -->
+
+        <!--END CONTENT -->
 
          <%= yield %>
 
@@ -154,23 +160,7 @@
         <footer class="footer pt-80">
             <div class="container">
                 <div class="row mb-60">
-                    <!-- Logo -->
-                    <div class="col-md-3 col-sm-3 col-xs-12 mb-xs-30">
-                        <a class="footer-logo" href="home.html">
-                            <img src="/img/logo-black.png" /></a>
-                    </div>
-                    <!-- Logo -->
-
-                    <!-- Newsletter -->
-                    <div class="col-md-4 col-sm-5 col-xs-12 mb-xs-30">
-                        <div class="newsletter">
-                            <form>
-                                <input type="email" class="newsletter-input input-md newsletter-input mb-0" placeholder="Enter Your Email">
-                                <button class="newsletter-btn btn btn-xs btn-white" type="submit" value=""><i class="fa fa-angle-right mr-0"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <!-- End Newsletter -->
+    
 
                     <!-- Social -->
                     <div class="col-md-3 col-md-offset-2 col-sm-4 col-xs-12">
@@ -186,16 +176,6 @@
                 </div>
                 <!--Footer Info -->
                 <div class="row footer-info mb-60">
-                    <div class="col-md-3 col-sm-12 col-xs-12 mb-sm-30">
-                        <a class="btn-link-a" href="about-1.html">Read More</a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30 mb-xs-0">
-                        <ul class="link">
-                            <li><a href="portfolio-grid-3col.html">Portfolio</a></li>
-                            <li><a href="login-register.html">Login & Signup</a></li>
-                            
-                        </ul>
-                    </div>
                     <div class="col-md-3 col-sm-6 col-xs-12 mb-sm-30">
                         <ul class="link">
                             <li><a href="contact-1.html">Contact Us</a></li>
@@ -203,8 +183,8 @@
                     </div>
                     <div class="col-md-3 col-sm-12 col-xs-12">
                         <ul class="link-small">
-                            <li><a href="mailto:yourname@domain.com"><i class="fa fa-envelope-o left"></i>yourname@domain.com</a></li>
-                            <li><a><i class="fa fa-phone left"></i>+40 (0) 012 345 6789</a></li>
+                            <li><a href="mailto:yourname@domain.com"><i class="fa fa-envelope-o left"></i>kse0824@gmail.com</a></li>
+                            <li><a><i class="fa fa-phone left"></i>312-345-4234</a></li>
                         </ul>
                     </div>
                 </div>
@@ -212,17 +192,6 @@
             </div>
 
             <hr />
-
-            <!-- Copyright Bar -->
-            <section class="copyright ptb-60">
-                <div class="container">
-                    <p class="">
-                        
-                        Template  by <a target="_blank" href="http://nileforest.com/"><b>nileforest</b></a>
-                    </p>
-                </div>
-            </section>
-            <!-- End Copyright Bar -->
 
         </footer>
         <!-- END FOOTER -->
