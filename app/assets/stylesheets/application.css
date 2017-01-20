@@ -29,8 +29,15 @@
 }
 
 .logo-height {
-	padding-top: 100px;
+	padding-top: 200px;
   
 }
 
+body {
+    background-image: url(congruent_pentagon.png)
+}
 
+.lobster2 {
+	font-family: Lobster_Two-italic.ttf, cursive;
+	
+}

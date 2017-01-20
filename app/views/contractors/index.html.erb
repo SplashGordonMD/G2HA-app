@@ -1,5 +1,7 @@
 <div class="container">
   <br>
+  <a href="/contractors/new" class="btn btn-default">Add a new contractor</a>
+  <a href="/reviews/new" class="btn btn-default">Review the contracotrs work</a>
   <br>
   <br>
   <br>
@@ -40,10 +42,10 @@ end -->
           <p><%= contractor.web_site %></p>
           <p><%= contractor.email %></p>
           <p>Job Description: <%= contractor.job_description %></p>
-          <div class="contractor-image" style="background-image: url(<%= contractor.image %>)"></div>
-          <% if false and contractor.preferred? %>
-            <div>
-              <img src="<%= asset_path 'preferred.gif' %>"" width="100">
+          <div class="contractor-image" style="background-image: url(<%= contractor.image || "/img/contractors/default.jpg" %>)"></div>
+          <% if contractor.preferred? %>
+            <div class="badge">
+              <img src="/img/preferred.png">
             </div>
           <% end %>
           <a href="/contractors/<%= contractor.id %>">Reviews</a>

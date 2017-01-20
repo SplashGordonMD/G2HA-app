@@ -9,3 +9,11 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+.badge{
+	position: absolute;
+	bottom: 1em;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0);
+	pointer-events: none;
+}
