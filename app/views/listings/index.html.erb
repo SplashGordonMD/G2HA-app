@@ -12,13 +12,26 @@
 <h2 class="title">Garibaldi Homes for Sale & Last Trades</h2>
 	<br>
 	<br>
-<% @listings.each do |listing| %>
-	<h2>Address: <%= listing.adress %> </h2>
-	<h3>For Sale: <%= listing.for_sale %> </h3>
-	<h3>Last Trades: <%= listing.last_trades %></h3>
-	<h4>Bedrooms: <%= listing.bedrooms %></h4>
-	<h4>Bathrooms: <%= listing.bathrooms %></h4>  
-	<br>
-	<br> 
-<% end %>
+<div class="row">
+	<div class="col-md-12">
+		<iframe src="https://www.homesbymarco.com/subdivisions/garibaldi_square_in_chicago_il#recent_sales" style="width: 100%; height: 500px"></iframe>
+	</div>
+</div>
+
+<div class="row">
+		<% @listings.each do |listing| %>
+	<div class="col-md-4">
+	<div class="well">
+		
+			<h2>Address: <%= listing.adress %> </h2>
+			<h3>For Sale: <%= listing.for_sale %> </h3>
+			<h3>Last Trades: <%= listing.last_trades %></h3>
+			<h4>Bedrooms: <%= listing.bedrooms %></h4>
+			<h4>Bathrooms: <%= listing.bathrooms %></h4>  
+			<br>
+			<br> 
+	</div>
+	</div>
+		<% end %>
+</div>
 </div>
