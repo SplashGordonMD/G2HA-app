@@ -7,30 +7,31 @@
   <br>
   <br>
   <br>
+  <h3 style= Lobster_Two-italic.ttf; class="textCenter padding40">Contract reviews empower us as homeowners at Garibaldi Square. Two review for of a single contractor with and avarage of 4 stars gives that contractor preferred status. Your opinion can lead to the contractor getting more or less work from our community. Send us a picture of their work. The review and pictures of their are the contractors "calling card" for thier work. Letting us know how they did, binds our community, and ensures quality craftmanship   </h3>
+  <br>
   <br>
 <h1>Review the Contractors work</h1>
 <%= form_tag '/reviews', method: :post do  %>
-  <div>
+  <div class="form-group">
     <%= hidden_field_tag :user_id, current_user.id %>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag :contractor_id %>
-    <%= select_tag(:contractor_id, options_from_collection_for_select(Contractor.order(:name), :id, :name, @review.contractor_id), {:prompt => 'Select a Contractor'} ) %>
+    <%= select_tag(:contractor_id, options_from_collection_for_select(Contractor.order(:name), :id, :name, @review.contractor_id), {:prompt => 'Select a Contractor', class: "form-control"} ) %>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag :text %>
-    <%= text_field_tag :text %>
+    <%= text_field_tag :text, '', class: "form-control" %>
   </div>
-  <div>
+  <div class="form-group">
+    <%= label_tag :job_category_id %>
+    <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category', class: "form-control"} ) %>
+  </div>
+  <div class="form-group">
     <%= label_tag :stars, "How many stars (5 is highly recommended, 1 never again):" %>
     <input id="input-id" name="stars" type="text" class="rating" data-size="lg" >
   </div>
-  <div>
-    <%= label_tag :job_category_id %>
-    <%= select_tag(:job_category_id, options_from_collection_for_select(JobCategory.order(:name), :id, :name, @review.job_category_id), {:prompt => 'Select a Category'} ) %>
-  </div>
-  <%= submit_tag "Submit" %>
-  </div>
+  <%= submit_tag "Submit", class: "btn btn-default" %>
 <% end %>
 
 <script>
