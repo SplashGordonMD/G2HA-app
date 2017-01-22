@@ -19,7 +19,7 @@
 }
 
 .padding40 {
-	padding:40px 0;
+	padding:20px 0;
 }
 
 .title {
@@ -43,3 +43,6 @@ body {
 
 }
 
+.width300 {
+	max-width:300px;
+}
