@@ -18,7 +18,7 @@
 	text-align:center;
 }
 
-.padding40 {
+.padding20 {
 	padding:20px 0;
 }
 
@@ -43,6 +43,6 @@ body {
 
 }
 
-.width300 {
-	max-width:300px;
+.width400 {
+	max-width:400px;
 }
