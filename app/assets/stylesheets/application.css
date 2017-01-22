@@ -24,9 +24,9 @@
 
 .title {
 	font-family: 'Lobster Two', cursive;
-	font-weight: italic;
-	text-transform: none;
-	font-size: 90px;
+	font-weight: bolder;
+	text-transform: none !important;
+	font-size: 120px;
 }
 
 .logo-height {
@@ -38,10 +38,7 @@ body {
     background-image: url(congruent_pentagon.png)
 }
 
-.lobster2 {
-	font-family: Lobster_Two-italic.ttf, cursive;
-
-}
+/**/
 
 .width400 {
 	max-width:400px;
