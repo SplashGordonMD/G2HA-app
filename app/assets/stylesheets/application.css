@@ -24,8 +24,9 @@
 
 .title {
 	font-family: 'Lobster Two', cursive;
+	font-weight: italic;
 	text-transform: none;
-	font-size: 70px;
+	font-size: 90px;
 }
 
 .logo-height {
@@ -39,5 +40,6 @@ body {
 
 .lobster2 {
 	font-family: Lobster_Two-italic.ttf, cursive;
-	
+
 }
+
