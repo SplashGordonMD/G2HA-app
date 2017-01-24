@@ -2869,7 +2869,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 }
 
 /*backround images*/
-.bg-img {
+/*.bg-img {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover !important;
@@ -2952,11 +2952,11 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 
 .bg-img18 {
     background-image: url("../img/full/18.jpg");
-}
 
+}
 .bg-img19 {
     background-image: url("../img/full/19.jpg");
-}
+}     
 
 .bg-img20 {
     background-image: url("../img/full/20.jpg");
@@ -3001,7 +3001,7 @@ header.header-dark.header-prepare .side-menu-btn ul li a {
 .bg-img30 {
     background-image: url("../img/full/30.jpg");
 }
-
+*/
 .border-b-box {
     padding: 25px;
     border-bottom: 1px solid #f1f1f1;
