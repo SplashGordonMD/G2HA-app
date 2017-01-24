@@ -2,7 +2,9 @@ class ReviewsController < ApplicationController
 
   def index
     @users = User.all
+    @reviews = Review.all
     render "index.html.erb"
+
   end
 
   def new
