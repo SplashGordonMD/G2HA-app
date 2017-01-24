@@ -2,10 +2,10 @@
 <div class="container title" style="text-transform: none;">
 <br>
 <br>
-	<h2 class="text" >Contract reviews empower us as homeowners at Garibaldi Square. Two review for of a single contractor with and avarage of 4 stars gives that contractor preferred status. Your opinion can lead to the contractor getting more or less work from our community. Send us a picture of their work. The review and pictures of their are the contractors "calling card" for thier work. Letting us know how they did, binds our community, and ensures quality craftmanship   </h2>
+	<h2 class="text" >Contract reviews empower us as homeowners at Garibaldi Square. Two review for of a single contractor with and avarage of 4 stars gives that contractor preferred status. Your opinion can lead to the contractor getting more or less work from our community. Send us a picture of their work. The review and pictures of their are the contractors "calling card" for thier work. Letting us know how they did, binds our community, and ensures quality craftmanship for all.  </h2>
 
 <img src="/assets/Garabalditownhome.jpg" class = "image">
-<img src="/assets/InterierPictureG2.jpg" class = "bozo">
+<img src="/assets/plumberfinishedprod2.jpg" class = "bozo">
   <!-- <img scr="assets/"> -->
 
 <h3 class="text">Tells if their quote was within the budget, if their workmanship was as expected, or any other acuman related to the work they completed. Knowing the reviews are available to potential customers, andpictures available for potiential customers will put the onus on the contractor to give a superior effort.</h3>
@@ -15,13 +15,18 @@
     <div class="col-md-4">
       <div class="well">
         <% if review.user %>
-          <h2>User: <%= review.user.first_name %> <%= review.user.last_name %> </h2>
+          <h2>Reviewer:<%= review.user.first_name %> <%= review.user.last_name %> </h2>
         <% else %>
-          <h2>User: ...</h2>
+          <h2>Reviewer: ...</h2>
         <% end %>
         <h2><a href="/contractors/<%= review.contractor.id %>"><%= review.contractor.name %></a></h2>
         <div>
           <img src="<%= review.contractor.image %>">
+          <% if review.contractor.preferred? %>
+            <div class="badge">
+              <img src="/img/preferred.png">
+            </div>
+          <% end %>
         </div>
         <div class="star-rating" style="float: left;">
           <% review.stars.times do %>
