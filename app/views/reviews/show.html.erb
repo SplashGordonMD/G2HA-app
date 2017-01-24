@@ -6,27 +6,23 @@
 	<br>
 	<br>
 	<br>
-	<br>
 <h2>Your reiews really matter. The reviews of contractors work and your satisfaction with that work will empower you and your neighbors. Give us your opinion of their efficiency, price, quality of workmanship or any other distinguishing characteristics. Tell us why you would hire or not hire a contractor again.</h2>
 
 <h2>Contractor: <%= @review.contractor.name %></h2>
 
   	<h3> 
   	  Stars:
-  	 <p> 
+  	 <h3> 
  	  
 	  <% @review.stars.times do %>
 	  	<div class="star-rating" style="float: left;"> 
-	  		<span>☆</span>
+	  		<h3><span>☆</span></h3>
 	  	</div>
 	  <% end %>
-	</p></h3>	
-</br>	
-
-
-<p>Job Category: <%= @review.job_category.name %></p>
-<p>Review: <%= @review.text %></p>
-<p><a href='/'>Home: </a></p> 
+	</h3></h3>	
+<h4>Job Category: <%= @review.job_category.name %></h4>
+<h4>Review: <%= @review.text %></h4>
+<h4> href='/'>Home: </h4>
 </div>
 
 
