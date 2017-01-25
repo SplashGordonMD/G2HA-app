@@ -42,7 +42,7 @@ end -->
           <p><%= contractor.web_site %></p>
           <p><%= contractor.email %></p>
           <p>Job Description: <%= contractor.job_description %></p>
-          <div class="contractor-image" style="background-image: url(<%= contractor.image || "/img/contractors/default.jpg" %>)"></div>
+           <div class="contractor-image" style="background-image: url(<%= contractor.image || "/img/contractors/default.jpg" %>)"></div>
           <% if contractor.preferred? %>
             <div class="badge">
               <img src="/img/preferred.png">

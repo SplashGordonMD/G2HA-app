@@ -13,7 +13,7 @@
   <div class="row">
     <% @reviews.each do |review| %>
     <div class="col-md-4">
-      <div class="well">
+      <div class="well height-700">
         <% if review.user %>
           <h2>Reviewer:<%= review.user.first_name %> <%= review.user.last_name %> </h2>
         <% else %>
