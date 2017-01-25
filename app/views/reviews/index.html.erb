@@ -12,32 +12,30 @@
 
   <div class="row">
     <% @reviews.each do |review| %>
+    
+
     <div class="col-md-4">
-      <div class="well height-700">
-        <% if review.user %>
-          <h2>Reviewer:<%= review.user.first_name %> <%= review.user.last_name %> </h2>
-        <% else %>
-          <h2>Reviewer: ...</h2>
-        <% end %>
-        <h2><a href="/contractors/<%= review.contractor.id %>"><%= review.contractor.name %></a></h2>
-        <div>
-          <img src="<%= review.contractor.image %>">
+        <div class="well height-700">
+          <h2 style="min-height: 1em"><%= review.contractor.name %> </h2>
+          <% if review.user %>
+            <h2>Reviewer:<%= review.user.first_name %> <%= review.user.last_name %> </h2>
+          <% else %>
+            <h2>Reviewer: ...</h2>
+          <% end %>
+        
+           <div class="contractor-image" style="background-image: url(<%= review.contractor.image || "/img/contractors/default.jpg" %>)"></div>
           <% if review.contractor.preferred? %>
-            <div class="badge">
+            <div style="margin-top: -200px">
               <img src="/img/preferred.png">
             </div>
           <% end %>
-        </div>
-        <div class="star-rating" style="float: left;">
-          <% review.stars.times do %>
-            <span>☆</span>
-          <% end %>
-        </div>
-        <br><br>
-        <p>Job Category: <%= review.job_category.name if review.job_category %></p>
-        <p>Review: <%= review.text %></p>
+          <div>
+            <p>Job Category: <%= review.job_category.name if review.job_category %></p>
+            <p>Review: <%= review.text %></p>
+          </div>
+          
+        </div> 
       </div>
-    </div>
     <% end %>
   </div>
 <h2>Enter your review</h2>

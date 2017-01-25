@@ -1,5 +1,5 @@
         <!-- Intro Section -->
-        <section Heroid="intro">
+        <section Heroid="intro" id="hero">
             <!--  Slider Section -->
             <div class="flexslider fullscreen-carousel hero-slider-1 ">
                 <ul class="slides">
@@ -36,7 +36,7 @@
 
                     <!--Slide-->
                     <li data-slide="dark-slide">
-                        <div class="slide-bg-image overlay-dark dark-bg parallax parallax-section1" data-background-img="/assets/IMG_0083.jpg">
+                        <div class="slide-bg-image overlay-dark dark-bg parallax parallax-section1" data-background-img="/assets/IMG_0109.jpg">
                             <div class="js-Slide-fullscreen-height container">
                                 <div class="intro-content">
                                     <div class="intro-content-inner"> 
@@ -52,7 +52,7 @@
 
                     <!--Slide-->
                     <li data-slide="dark-slide">
-                        <div class="slide-bg-image overlay-dark dark-bg parallax parallax-section1" data-background-img="<%= asset_path 'Garabalditownhome.jpg' %>">
+                        <div class="slide-bg-image overlay-dark dark-bg parallax parallax-section1" data-background-img="<%= asset_path 'indoor_lights.jpg' %>">
                             <div class="js-Slide-fullscreen-height container">
                                 <div class="intro-content">
                                     <div class="intro-content-inner">
@@ -103,8 +103,6 @@
         </section>
         <!-- End Testimonials -->
 
-        <hr />
-
         <section id="blog" class="wow fadeIn ptb ptb-sm-80 animated" style="visibility: visible; animation-name: fadeIn;">
             <div class="container">
                 <h3 class="float-left float-none-xs"></h3>
@@ -115,7 +113,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-40">
                         <div class="post-meta"><a>Bricks, Pavers, Tile, Instalation and designed by</a></div>
                             <div class="post-media">
-                                <img class="item-container" src="<%= asset_path 'outdoorpatio.jpeg' %>" alt="">
+
+           <div class="contractor-image" style="background-image: url(<%= asset_path 'outdoorpatio.jpeg' %>); width: 100%"></div>
+
                             </div>
                             <div class="post-header">
                                 <h5><a href="">Stefano Nottolinni</a></h5>
@@ -123,11 +123,13 @@
                     </div>
 
                     <div class="col-md-4 col-md-6 col-sm-6 mb-sm-40">   
-                        <div class="post-meta"><a>Marble vanity,beed board wall design by</a></div>
+                        <div class="post-meta"><a>Garibaldi Square at Harrison Ave.</a></div>
                             <div class="post-media">
-                                <img class="item-container" src="<%= asset_path 'helfbath3.jpeg' %>" alt="">
+
+           <div class="contractor-image" style="background-image: url(<%= asset_path 'twilightview.jpg' %>); width: 100%"></div>
+           
                             </div>
-                            <div class="post-meta"><a>Phil McCarren</a>,</span></div>
+                            <div class="post-meta"><a>at Twilight</a>,</span></div>
                             <div class="post-header">
                                 <h5><a href="Phil McCarren"></a></h5>
                             </div>
@@ -136,8 +138,9 @@
                     <div class="col-lg-4 col-md-6 col-sm-6 mb-sm-40">
                         <div class="post-meta"><a>Kitchen Island at dinner table height a concept of</a></div> 
                             <div class="post-media">
-                            <br>
-                                <img class="item-container" src="<%= asset_path 'low-island-with-seating2.png' %>" alt="">
+
+           <div class="contractor-image" style="background-image: url(<%= asset_path 'low-island-with-seating2.png' %>); width: 100%"></div>
+           
                             </div>
                             <div class="post-meta"><a>Don Van Cura and Van Cura Construction</a></div>
                             </div>
@@ -235,7 +238,7 @@
                             <!-- Shop item images -->
                             <div class="">
                                 <div class="app/assets/img/harrisonView.jpg">
-                                    <img src="app/assets/img/halfbath5.jpeg">
+                                    <img src="app/public/img/twilightview.jpeg">
                                 </div>
                                 <div class="item-mask">
                                     <div class="item-mask-detail">
@@ -264,10 +267,8 @@
                                 <div class="app/assets/img/low-island-with-seating2.png">
                                     <img src="app/assets/IMG_0064(1).jpg" />
                                 </div>
-                                 <div class="item-mask">
-                                    <div class="app/assets/img/cloth_alike.png">
-                                        <div class="app/assets/img/halfbath.jpeg">
-                                            <a class="btn btn-line-xs btn-white-line"><i class=""></i></a>
+                                 <div
+                
                                         </div>
                                     </div>
                                 </div>
@@ -277,18 +278,16 @@
 
                             <!-- Shop item info -->
                                 
-              <!--              </div>
+                           </div>
                             <!-Shop item info -->
-             <!--           </div>
-            <!-       </div>
+                   </div>
+                  </div>
 
-              <!-    <div class="col-md-3 col-sm-6">
+                  <div class="col-md-3 col-sm-6">
                         <div class="item-box">
                             <! Shop item images -->
-               <!--             <div class="shop-item">
-                                <div class="item-img">
-                                    <img src="/img/"cort_yard.jpg" />
-                                </div>
+                          <div class="shop-item">
+                               
                                 <div class="item-mask">
                                     <div class="item-mask-detail">
                                         <div class="item-mask-detail-ele">
@@ -300,73 +299,282 @@
                             <End Shop item images -->
 
                             <!-- Shop item info -->
-               <!--             <div class="shop-item-info">
+                      <div class="shop-item-info">
                                 <a href="shop-detail.html">
                                     <h6 class="shop-item-name"></h6>
                                 </a>
                                 <div class="shop-item-price"><span></span></div>
                             </div>
                             <! Shop item info -->
-       <!--                 </div>
-      <!-             </div>
+                        </div>
+               </div>
 
-      <!-         </div>
-     <!      </div>   
-    <!-   </section>
+              </div>
+         </div>   
+     </section>
         <! End Shop Item -->
+        <div class="contractor-image">
+
+        </div>
 
         <!-- Client Logos Section -->
-        <section id="client-logos" class="wow fadeIn ptb ptb-sm-200">
+
+                            <div class="owl-carousel item3-carousel nf-carousel-theme 
+                                o-flow-hidden owl-theme"  style="opacity: 1; display: block;">
+
+                        <div class="owl-wrapper-outer"><div class="owl-wrapper" style="width: 5600px; left: 
+                        0px; display: block;"><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    <div class="shop-item-info">
+                                        <a href="shop-detail.html">
+                                            <h6 class="shop-item-name">Veritatis et quasi architecto</h6>
+                                        </a>
+                                        <div class="shop-item-price"><span>$399.00</span></div>
+                                    </div>
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            <img src="img/product/01.jpg">
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    <div class="shop-item-info">
+                                        <a href="shop-detail.html">
+                                            <h6 class="shop-item-name">Sed fringilla mauris</h6>
+                                        </a>
+                                        <div class="shop-item-price"><span>$399.00</span></div>
+                                    </div>
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            <img src="img/product/02.jpg">
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    <div class="shop-item-info">
+                                        <a href="shop-detail.html">
+                                            <h6 class="shop-item-name">Beatae vitae dicta explicabo</h6>
+                                        </a>
+                                        <div class="shop-item-price"><span>$399.00</span></div>
+                                    </div>
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            <img src="img/product/03.jpg">
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            <img src="img/product/04.jpg">
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    <div class="shop-item">
+                                        <div class="item-img">
+                                            <img src="img/product/05.jpg">
+                                        </div>
+                                        <div class="item-mask">
+                                            <div class="item-mask-detail">
+                                                <div class="item-mask-detail-ele">
+                                                    <a class="btn btn-line-xs btn-white-line"><i class="fa fa-shopping-cart"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div><div class="owl-item" style="width: 400px;"><div class="item">
+                            <div class="nf-col-padding">
+                                
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                <!--   
+                                    </div>
+                                    <!-- Shop item info -->
+                                </div>
+                            </div>
+                        </div></div></div></div>
+
+                        <div class="owl-wrapper" style="width: 4200px; left: 0px; display: block; transform: translate3d(0px, 0px, 0px); transition: all 1000ms ease;"><div class="owl-item" style="width: 300px;"><div class="item">
+                            <div class="nf-col-padding">
+                                <div class="item-box">
+                                    <!-- Shop item images -->
+                                    
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+            
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                   
+                                    <!-- Shop item info -->
+                               
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    
+                                    <!-- Shop item info -->
+                                
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                   
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    
+                                    <!-- Shop item info -->
+
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                   
+                                    <!-- Shop item info -->
+                              
+                                    <!-- End Shop item images -->
+
+                                    <!-- Shop item info -->
+                                    
+        
             <div class="container">
                 <div class="owl-carousel client-carousel nf-carousel-theme ">
-                    <div class="">
-                        <div class="client-logo">
-                            <img src="/img/logos/01.png" alt="" />
+                    
+                    <div class="owl-item"  
+                            <img src="/img/Harrisonbus.jpg">
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/02.png" alt="" />
+                            <img src="/img/Industrialbathroom.jpeg"/>
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/03.png" alt="" />
+                            <img src="/img/Myhouse.jpg"/>
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/04.png" alt="" />
+                            <img src="/img/Imigrantsign.jpg"/>
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/05.png" alt="" />
+                            <img src="/img/Lampwideangle.jpg" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/06.png" alt="" />
+                            <img src="/img/BackofPark.jpg" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/08.png" alt="" />
+                            <img src="/img/outdoor_cort_yard.png" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/01.png" alt="" />
+                            <img src="/img/twilightview.jpg" />
                         </div>
                     </div>
                     <div class="item">
                         <div class="client-logo">
-                            <img src="/img/logos/02.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <img src="/img/logos/03.png" alt="" />
+                            <img src="/img/InterierPictureG2.jpg" />
                         </div>
                     </div>
                 </div>
