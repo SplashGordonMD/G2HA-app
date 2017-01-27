@@ -12,7 +12,19 @@
     <br>
     <br>
     <br>
-  <h1>Name: <%= @contractor.name %> </h1>
+
+
+  <% if @contractor.preferred? %>
+    <div class="show-page-badge">
+      <img src="/img/preferred.png">
+    </div>
+  <% end %>
+  <div class="contractor-image" style="background-image: url(<%= @contractor.image || "/img/contractors/default.jpg" %>)">  
+  </div>
+
+
+
+  <h1>Name: <%= @contractor.name %> </h1> 
   <p>Phone Number: <%= @contractor.phone_number %> </p>
   <p>Website: <%= @contractor.web_site %></p>
   <p>Email: <%= @contractor.email %></p>
